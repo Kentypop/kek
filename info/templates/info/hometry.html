@@ -1,0 +1,41 @@
+{% extends "info/base.html" %}
+{% block content %}
+    {% for post in posts %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ post.author }}</a>
+              <small class="text-muted">{{ post.date_posted }}</small>
+            </div>
+            <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+            <p class="article-content">{{ post.content }}</p>
+          </div>
+        </article>
+    {% endfor %}
+
+
+    {% for girl in girls %}
+      <p> her name is {{ girl.name }}</p>
+      <p> my love for her... {{ girl.love }}</p>
+      <p> she's just an {{ girl.descript }} chick</p>
+    {% endfor %}
+
+
+    {% for company in companies %}
+      <h4> I own {{ company.name }} </h4>
+      <h4> Ceck out my site at {{ company.url }}</h4>
+      <h3> hi welcome {{ company.creator }} </h3>
+    {% endfor %}
+
+    {% for servicehair in servicehairs %}
+      <h4> how much n the details are {{ servicehair.price }},, {{ servicehair.name }}      </h4>
+    {% endfor %}
+
+    {% for servicehair in servicehairs %}
+     <h4> -CUTS- </h4>
+      <p class="kek"> {{ servicehair.name }} </p>
+      <p> {{ servicehair.price }} </p>
+    {% endfor %}
+
+
+{% endblock content %}
